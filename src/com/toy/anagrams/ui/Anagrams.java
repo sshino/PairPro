@@ -32,9 +32,12 @@
 package com.toy.anagrams.ui;
 
 import com.toy.anagrams.lib.WordLibrary;
+
 import java.awt.Dimension;
 import java.awt.Point;
 import java.awt.Toolkit;
+import java.util.Random;
+
 import javax.swing.JFrame;
 import javax.swing.SwingUtilities;
 
@@ -74,8 +77,14 @@ public class Anagrams extends JFrame {
             }
         });
     }
-
-    private int wordIdx = 0;
+    
+    public int Random(){
+    	Random rnd = new Random(); 
+    	int ran = rnd.nextInt(24);
+    	return ran;
+    }
+    
+    private int wordIdx = Random();
     private WordLibrary wordLibrary;
 
     /** Creates new form Anagrams */
